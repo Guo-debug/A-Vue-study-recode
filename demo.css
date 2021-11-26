@@ -1,0 +1,71 @@
+@import url(http://fonts.font.im/css?family=Quicksand);
+:root {
+    font-size: 15px;
+    font-family: 'Quicksand', sans-serif;
+}
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: #e493d0;
+    background-image: radial-gradient(closest-side, rgba(235, 105, 78, 1), rgba(235, 105, 78, 0)),
+        radial-gradient(closest-side, rgba(243, 11, 168, 1), rgba(243, 11, 168, 0)),
+        radial-gradient(closest-side, rgba(2, 105, 78, 1), rgba(2, 105, 78, 0)),
+        radial-gradient(closest-side, rgba(135, 105, 78, 1), rgba(135, 105, 78, 0)),
+        radial-gradient(closest-side, rgba(5, 15, 78, 1), rgba(5, 15, 78, 0));
+    background-size: 130vmax 130vmax, 80vmax 80vmax, 90vmax 90vmax, 110vmax 110vmax, 90vmax 90vmax;
+    background-position: -80vmax -80vmax, 60vmax -30vmax, 10vmax 10vmax, -30vmax -10vmax,
+        50vmax 50vmax;
+    background-repeat: no-repeat;
+    animation: 10s movement linear infinite;
+}
+span {
+    z-index: 10;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    color: transparent;
+    text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.6), 4px 4px 1px rgba(0, 0, 0, 0.5);
+}
+body:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+}
+
+@keyframes movement {
+    0%,
+    100% {
+        background-size: 130vmax 130vmax, 80vmax 80vmax, 90vmax 90vmax, 110vmax 110vmax,
+            90vmax 90vmax;
+        background-position: -80vmax -80vmax, 60vmax -30vmax, 10vmax 10vmax, -30vmax -10vmax,
+            50vmax 50vmax;
+    }
+    25% {
+        background-size: 100vmax 100vmax, 90vmax 90vmax, 80vmax 90vmax, 100vmax 100vmax,
+            100vmax 100vmax;
+        background-position: -70vmax -60vmax, 80vmax -40vmax, 20vmax 20vmax, -40vmax -30vmax,
+            40vmax 30vmax;
+    }
+    50% {
+        background-size: 120vmax 140vmax, 100vmax 80vmax, 70vmax 60vmax, 80vmax 80vmax,
+            90vmax 90vmax;
+        background-position: -70vmax -50vmax, 60vmax -30vmax, 30vmax 60vmax, -60vmax -40vmax,
+            60vmax 50vmax;
+    }
+    75% {
+        background-size: 100vmax 140vmax, 70vmax 90vmax, 60vmax 50vmax, 120vmax 130vmax,
+            70vmax 70vmax;
+        background-position: -90vmax -90vmax, 70vmax -30vmax, 30vmax 30vmax, -20vmax -10vmax,
+            60vmax 40vmax;
+    }
+}
