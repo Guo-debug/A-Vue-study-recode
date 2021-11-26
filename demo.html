@@ -10,7 +10,15 @@
     <body>
         <div id="app">
             <span>{{word}}</span>
+            <Login :name="usname" :pswd="uspswd"></Login>
         </div>
+        <template id="Login">
+            <div>
+                {{name}}
+                {{userName}}
+                <input type="text" :value="userName" @input="changeName">
+            </div>
+        </template>
         
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
         <script src="./demo.js"></script>

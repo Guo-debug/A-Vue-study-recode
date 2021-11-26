@@ -1,7 +1,25 @@
 const app = new Vue({
     el: '#app',
     data: {
-        word: 'Hello Kerwin',
+        usname: '',
+        uspswd: '',
     },
-    component: {},
+    components: {
+        Login: {
+            template: '#Login',
+            data: {
+                userName: name,
+                userPswd: pswd,
+            },
+            methods: {
+                changeName(event) {
+                    this.userName = event.target.value;
+                },
+            },
+            props: {
+                name: String,
+                pswd: Number,
+            },
+        },
+    },
 });
