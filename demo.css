@@ -1,11 +1,11 @@
-@import url(http://fonts.font.im/css?family=Quicksand);
+@import url(http://fonts.font.im/css?family=Quicksand); /*引入谷歌字体*/
 :root {
     font-size: 15px;
     font-family: 'Quicksand', sans-serif;
 }
 body {
     margin: 0;
-    min-height: 100vh;
+    min-height: 100vh; /*min-height为最小高度   vh为相对视口（屏幕）的百分比单位*/
     background-color: #e493d0;
     background-image: radial-gradient(closest-side, rgba(235, 105, 78, 1), rgba(235, 105, 78, 0)),
         radial-gradient(closest-side, rgba(243, 11, 168, 1), rgba(243, 11, 168, 0)),
@@ -19,30 +19,31 @@ body {
     animation: 10s movement linear infinite;
 }
 span {
-    z-index: 10;
-    position: relative;
+    z-index: 10; /*在Z轴显示的优先级*/
+    position: relative; /*相对元素自身固定位置*/
     width: 100%;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 5rem;
-    color: transparent;
-    text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.6), 4px 4px 1px rgba(0, 0, 0, 0.5);
+    display: flex; /*弹性盒子模型*/
+    justify-content: center; /*垂直居中排列*/
+    align-items: center; /*水平居中排列*/
+    font-size: 5rem; /*root元素的字体大小的5倍*/
+    color: transparent; /*透明*/
+    text-shadow: 0px 0px 1px rgba(255, 255, 255, 0.6), 4px 4px 1px rgba(0, 0, 0, 0.5); /*文本阴影*/
 }
 body:after {
     content: '';
     display: block;
     width: 100%;
     height: 100%;
-    position: fixed;
+    position: fixed; /*相对页面固定位置*/
     top: 0;
     left: 0;
-    backdrop-filter: blur(40px);
-    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(40px); /*给背景添加模糊*/
+    -webkit-backdrop-filter: blur(40px); /*适配谷歌引擎*/
 }
 
 @keyframes movement {
+    /*动画*/
     0%,
     100% {
         background-size: 130vmax 130vmax, 80vmax 80vmax, 90vmax 90vmax, 110vmax 110vmax,
